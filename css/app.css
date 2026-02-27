@@ -1,0 +1,51 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  /*Globales*/
+a {
+    text-decoration: none;
+    color: #000;
+}
+.contenedor { /*Centra el contenido*/
+    max-width: 1200px;
+    margin: auto;
+}
+
+  /*Header y navegacion*/
+
+.nombre-sitio {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.nombre-sitio span {
+    color: #037bc0;
+}
+
+.contenedor-nav {
+    border-top: 1px solid #e1e1e1;
+}
+
+.nav-principal {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero {
+    background-image: url(../img/principal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 850px ;
+}
+
+/* Listado Categorias*/
+
+.listado-categorias {
+    display: grid;
+}

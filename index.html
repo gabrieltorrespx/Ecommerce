@@ -4,21 +4,29 @@
     <meta charset="UTF-8"> <!-- Caracteres especiales -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Vista para dispositivos móviles -->
     <title>Document</title> <!-- Titulo de la Pagina-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/app.css">
+
 </head>
 <body> 
 
     <header>
-        <h1>Tienda Muebles</h1>
+        <h1 class="nombre-sitio">Tienda <span>Muebles</span></h1>
     </header>
     
-    <nav>
+    <div class="contenedor-nav">
+        <nav class="nav-principal contenedor">
         <a href="index.html">Inicio</a>
         <a href="nosotros.html">Nosotros</a>
         <a href="tienda.html">Tienda</a>
         <a href="blog.html">Blog</a>
-        <a href="galeria.html">Galeria</a>
+        <a href="galeria.html">Galeria</a> 
         <a href="contacto.html">Contacto</a>
     </nav>
+
+    </div> 
+    
+    <div class="hero"></div>
 
     <section>
         <h2>Categoria Productos</h2>
@@ -27,16 +35,17 @@
             <a href="">Oficina</a>
         </div>
 
-        <div>
-            <img src="img/categoria2.jpg" alt="Imagen categoria"> 
-            <a href="">Hogar</a>
-        </div>
+        <div class="listado-categorias">
+            <div>
+                <img src="img/categoria2.jpg" alt="Imagen categoria"> 
+                <a href="">Hogar</a>
+            </div>
 
-        <div>
-            <img src="img/categoria3.jpg" alt="Imagen categoria"> 
-            <a href="">Cocina</a>
+            <div>
+                <img src="img/categoria3.jpg" alt="Imagen categoria"> 
+                <a href="">Cocina</a>
+            </div>
         </div>
-
     </section>
 
     <section>
