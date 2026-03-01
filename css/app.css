@@ -1,25 +1,60 @@
 html {
-    box-sizing: border-box;
+    box-sizing: border-box; /* Para cuando se le agregue un width y despues 
+    un padding, no modifique el tamaño del elemento*/
+    font-size: 62.5%; /* 1REM = 10px */
   }
   *, *:before, *:after {
     box-sizing: inherit;
   }
 
+body {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.6rem;/* Tamaño recomendado para las fuentes */
+    line-height: 2;
+    font-optical-sizing: auto; /* Ajusta el grosor de las lineas segun el grosor de la letra*/
+    font-weight: 400; /* Grosor de la letra*/
+    font-style: normal; /* Estilo de la letra (Arial, Cursiva etc)*/
+  }
+
   /*Globales*/
+h1, h2, h3 {
+    font-family: "Playfair", serif;
+    margin: 0 0 2.5rem 0;
+    font-optical-sizing: auto; /* Ancho de las lineas que forman cada letra segun si weight*/
+    font-weight: 700; /* Grosor de la letra*/
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
 a {
     text-decoration: none;
     color: #000;
 }
 .contenedor { /*Centra el contenido*/
-    max-width: 1200px;
+    max-width: 120rem;
     margin: auto;
+}
+
+img {
+    max-width: 100%;
+    display: block;
 }
 
   /*Header y navegacion*/
 
 .nombre-sitio {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 5rem;
     text-align: center;
 }
 
@@ -28,11 +63,11 @@ a {
 }
 
 .contenedor-nav {
-    border-top: 1px solid #e1e1e1;
+    border-top: .1rem solid #e1e1e1;
 }
 
 .nav-principal {
-    padding: 20px 0;
+    padding: 2rem 0;
     display: flex;
     justify-content: space-between;
 }
@@ -40,12 +75,35 @@ a {
 .hero {
     background-image: url(../img/principal.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 850px ;
+    background-size: cover; /* La imagen cubre  todo el espacio disponible*/
+    background-position: center center;
+    height: 55rem ;
 }
 
 /* Listado Categorias*/
+.categorias {
+    padding-top: 2.5rem;
+}
+.categorias h2{
+    text-align: center;
+}
 
+.categoria a{
+    text-align: center;
+    display: block; /* Permite usar todo el espacio disponible y poder jugar con el texto en este caso*/
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+.categoria a:hover {
+    background-color: #037bc0;
+    color: #FFFFFF;
+    border-bottom-right-radius: 2rem; /* Redondea los bordes del boton en la parte de abajo a la derecha */
+    border-bottom-left-radius: 2rem;
+
+}
 .listado-categorias {
     display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas y 1 fila */
+    gap: 2rem; /* Separacion de las columnas hacia los eje x, y*/
 }

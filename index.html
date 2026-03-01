@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Vista para dispositivos móviles -->
     <title>Document</title> <!-- Titulo de la Pagina-->
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/app.css">
 
 </head>
@@ -28,20 +31,21 @@
     
     <div class="hero"></div>
 
-    <section>
-        <h2>Categoria Productos</h2>
-        <div>
-            <img src="img/categoria1.jpg" alt="Imagen categoria"> 
-            <a href="">Oficina</a>
-        </div>
-
+    <section class="contenedor categorias">
+        <h2>Categoria de <span>Productos</span></h2>
+        
         <div class="listado-categorias">
-            <div>
+            <div class="categoria">
+                <img src="img/categoria1.jpg" alt="Imagen categoria"> 
+                <a href="">Oficina</a>
+            </div>
+
+            <div class="categoria">
                 <img src="img/categoria2.jpg" alt="Imagen categoria"> 
                 <a href="">Hogar</a>
             </div>
 
-            <div>
+            <div class="categoria">
                 <img src="img/categoria3.jpg" alt="Imagen categoria"> 
                 <a href="">Cocina</a>
             </div>
