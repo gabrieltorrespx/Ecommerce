@@ -59,6 +59,7 @@ img {
     font-weight: 900;
     padding: 1rem;
     transition: background-color .3s ease-out; /* Hace la animacion del boton */
+    text-align: center;
 
 }
 
@@ -71,6 +72,9 @@ img {
     text-align: center; /* Una utuilidad solo puede tener 1 propiedad y valor*/
 }
 
+.max-width-30 {
+    max-width: 30rem;
+}
   /*Header y navegacion*/
 
 .nombre-sitio {
@@ -247,4 +251,72 @@ grid-column: 1 / 4;
 .copyright {
     margin-top: 5rem;
     text-align: center;   
+}
+
+/* Nosotros */
+
+.contenido-nosotros {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); /* Cuando la imagen alcanza el size de 25rem pasa cubrir toda una fraccion y el texto se posiciona de bajo*/
+    gap: 4rem;
+}
+
+.informacion-nosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;/* Para alinear contenido de forma vertical*/
+}
+
+/* Blog */
+
+.contenedor-blog {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 4rem;
+}
+
+.entrada {
+    border-bottom:.2rem solid #e1e1e1;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+}
+
+.entrada:last-of-type { /* pseudo selector para eliminar el ultimo border*/
+    border: none;
+}
+
+.entrada-meta {
+    display: flex;
+    justify-content: space-between;
+}
+
+.entrada-meta p {
+    font-weight: 700;
+}
+
+.entrada-meta span {
+    color: #037bc0;
+}
+
+.contenido-entrada-blog {
+    width: 60rem;
+    margin: 0 auto;
+}
+
+/* Galeria */
+
+.galeria {
+    list-style: none; /* Quita la viñeta*/
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.galeria img {
+    height: 40rem;
+    width: 40rem;
+    object-fit: cover; /* Para que se ajuste al tamaño correctamente*/
 }
