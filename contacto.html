@@ -1,11 +1,150 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<!DOCTYPE html>
+<html lang="zxx">
+<head> 
+    <meta charset="UTF-8"> <!-- Caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Vista para dispositivos móviles -->
+    <title>Ecommerce - Contac</title> <!-- Titulo de la Pagina-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/app.css">
+
 </head>
-<body>
+<body> 
+
+    <header>
+        <h1 class="nombre-sitio">Tienda <span>Muebles</span></h1>
+    </header>
     
+    <div class="contenedor-nav">
+        <nav class="nav-principal contenedor">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="tienda.html">Tienda</a>
+            <a href="blog.html">Blog</a>
+            <a href="galeria.html">Galeria</a> 
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+    </div> 
+
+    <main class="contenido-principal contenedor">
+        <h2 class="text-center">Contact</h2>
+
+        <form action="">
+            
+            <fieldset>
+                <legend>Tus Datos</legend> <!-- Describe lo que contiene el fieldset-->
+                <div class="campo">
+                    <label for="nombre">Nombre</label> <!-- De manera predeterminado de alinean a la izquierda porque tienen un display inline-->
+                    <input id="nombre" type="text" placeholder="Tu nombre" required> <!-- De manera predeterminado de alinean a la izquierda porque tienen un display inline-->
+                </div>
+
+                <div class="campo">    
+                    <label for="telefono">Telefono</label>
+                    <input id="telefono" type="number" placeholder="Tu Numero" required>
+                </div>    
+
+                <div class="campo">
+                    <label for="email">Tu email</label>
+                    <input id="email" type="email" placeholder="Tu email" required>
+                </div>
+
+                <div class="campo">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea rows="10" cols="10"></textarea>
+                </div>
+         
+            </fieldset>
+
+            <fieldset>
+                <legend>Pais</legend>
+                <div class="campo">
+                    <label for="pais">Nombre</label> <!-- De manera predeterminado de alinean a la izquierda porque tienen un display inline-->
+                    <select id="pais" required>
+                        <option value="">-- Seleccione --</option>
+                        <option value="VE">Venezuela</option>
+                        <option value="CO">Colombia</option>
+                        <option value="USA">Estados Unidos</option>
+                        <option value="AR">Argentina</option>
+                        <option value="SV">El Salvador</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Informacion Extra</legend>
+
+                <div class="campo">
+
+                    <label for="cliente">Cliente</label>
+                    <input id="cliente" type="radio" name="tipo" value="cliente" required> <!-- value para usarlo con php y poder enviar informacion al servidor-->
+                </div>
+
+                <div class="campo">
+
+                    <label for="proveedor">Proveedor</label>
+                    <input id="proveedor" type="radio" name="tipo" value="proveedor" required> <!-- value para usarlo con php y poder enviar informacion al servidor-->
+                </div>
+
+                <div>
+                    <label for="categoria">Categoria de Interes</label>
+                    <input list="categorias" name="categorias" required>
+                    <datalist id="categorias">
+                        <option value="Cocina"></option>
+                        <option value="Exterior"></option>
+                        <option value="Recamaras"></option>
+                        <option value="Oficinas"></option>
+                        <option value="Television"></option>
+                        <option value="Escritorio"></option>
+                    </datalist>
+                </div>
+
+            </fieldset>
+
+            <input type="submit" value="Enviar Formulario">
+        </form>
+    </main>
+
+    <footer class="site-footer">
+        <div class="grid-footer contenedor">
+            <div>
+                <h3>Categorias</h3>
+                
+                <nav class="footer-menu">
+                    <a href="#">Cocina</a>
+                    <a href="#">Oficina</a>
+                    <a href="#">Jardin</a>
+                    <a href="#">Cochera</a>
+                    <a href="#">Dormitorios</a>
+                </nav>
+            </div>
+
+            <div>
+                <h3>Sobre Nosotros</h3>
+
+                <nav class="footer-menu">
+                    <a href="#">Nuestra historia</a>
+                    <a href="#">Mision, Vision y Valores</a>
+                    <a href="#">Carreras</a>
+                    <a href="#">Politicas de privacidad</a>
+                    <a href="#">Terminos del Servicio</a>
+                </nav>
+            </div>
+
+            <div>
+                <h3>Soporte</h3>
+
+                <nav class="footer-menu">
+                    <a href="#">Preguntas frecuentes</a>
+                    <a href="#">Ayuda en linea</a>
+                    <a href="#">Confianza y seguridad</a>
+                </nav>
+            </div>
+        </div>
+
+        <p class="copyright">Todos los derechos resevados, TiendaMuebles</p>
+    </footer>
 </body>
-</html>
+</html> 

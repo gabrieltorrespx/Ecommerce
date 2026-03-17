@@ -318,5 +318,5 @@ grid-column: 1 / 4;
 .galeria img {
     height: 40rem;
     width: 40rem;
-    object-fit: cover; /* Para que se ajuste al tamaño correctamente*/
+     /* Para que se ajuste al tamaño correctamente*/
 }
